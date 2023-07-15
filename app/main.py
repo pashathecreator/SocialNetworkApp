@@ -34,9 +34,7 @@ app.include_router(user.router)
 app.include_router(authentication.router)
 app.include_router(vote.router)
 
-logger.error("gasgsag")
-
 
 @app.get("/")
 def root():
-    return {"message": "Not Hello World"}
+    return {"message": "Hello, World!"}
