@@ -8,7 +8,6 @@ jobs:
         steps:
             - name: pulling git repository
               uses: actions/checkout@v3
-            - name: say hi
             - name: Install python 3.10
               uses: actions/setup-python@v4
               with:
