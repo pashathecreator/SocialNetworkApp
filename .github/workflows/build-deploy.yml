@@ -12,7 +12,7 @@ jobs:
           DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
           SECRET_KEY: ${{secrets.SECRET_KEY}}
           ALGORITHM: ${{secrets.ALGORITHM}}
-          ACCESS_TOKEN_EXPIRE_MINUTES: ${{secrets.ALGORITHM}}
+          ACCESS_TOKEN_EXPIRE_MINUTES: ${{secrets.ACCESS_TOKEN_EXPIRE_MINUTES}}
           POSTGRES_PASSWORD: ${{secrets.POSTGRES_PASSWORD}}
           POSTGRES_DB: ${{secrets.POSTGRES_DB}}
         runs-on: ubuntu-latest
