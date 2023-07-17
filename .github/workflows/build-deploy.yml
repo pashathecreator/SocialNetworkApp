@@ -61,4 +61,3 @@ jobs:
                 file: ./Dockerfile
                 push: true
                 tags: ${{secrets.DOCKER_HUB_USERNAME}}/social-network-api-api:latest
-                cache
