@@ -133,4 +133,4 @@ def update_post(
 
     db.commit()
     new_post = post_query.first()
-    return schemas.PostCreate(title=new_post.title, content=new_post.conte)
+    return schemas.PostCreate(title=new_post.title, content=new_post.content)
