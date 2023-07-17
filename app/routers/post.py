@@ -1,15 +1,15 @@
 from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
 from sqlalchemy.orm import Session
-
 from sqlalchemy import func
 from .. import models, schemas, oauth2
 from ..database import get_db
+from typing import List
 
 
 router = APIRouter(prefix="/posts", tags=["Posts"])
 
 
-@router.get("/", response_model=list[schemas.PostOut])
+@router.get("/", response_model=List[schemas.PostOut])
 def get_posts(
     db: Session = Depends(get_db),
     current_user: int = Depends(oauth2.get_current_user),
@@ -133,4 +133,4 @@ def update_post(
 
     db.commit()
     new_post = post_query.first()
-    return schemas.PostCreate(title=new_post.title, content=new_post.content)
+    return schemas.PostCreate(title=new_post.title, content=new_post.conte)
