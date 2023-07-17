@@ -6,7 +6,7 @@ jobs:
     job1:
         runs-on: ubuntu-latest
         
-        env:
+          env:
           DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
           DATABASE_PORT: ${{secrets.DATABASE_PORT}}
           DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
@@ -20,8 +20,8 @@ jobs:
           postgres:
             image: postgres
             env:
-              POSTGRES_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
-              POSTGRES_DB: ${{secrets.DATABASE_NAME}}_test
+              POSTGRES_PASSWORD: 12345
+              POSTGRES_DB: fastapi_test
             ports:
               - 5432:5432
             options: >-
