@@ -4,6 +4,8 @@ on: [push, pull_request]
 
 jobs:
     job1:
+        runs-on: ubuntu-latest
+        
         env:
           DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
           DATABASE_PORT: ${{secrets.DATABASE_PORT}}
@@ -13,7 +15,7 @@ jobs:
           SECRET_KEY: ${{secrets.SECRET_KEY}}
           ALGORITHM: ${{secrets.ALGORITHM}}
           ACCESS_TOKEN_EXPIRE_MINUTES: ${{secrets.ACCESS_TOKEN_EXPIRE_MINUTES}}
-        
+
         services:
           postgres:
             image: postgres
@@ -27,9 +29,6 @@ jobs:
               --health-interval 10s
               --health-timeout 5s
               --health-retries 5
-
-
-        runs-on: ubuntu-latest
         steps:
             - name: pulling git repository
               uses: actions/checkout@v3
