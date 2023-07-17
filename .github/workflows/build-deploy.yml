@@ -62,7 +62,7 @@ jobs:
                 push: true
                 tags: ${{secrets.DOCKER_HUB_USERNAME}}/social-network-api-api:latest
     deploy:
-      runs-on: ubuntu latest
+      runs-on: ubuntu-latest
       needs: [build]
 
       steps:
