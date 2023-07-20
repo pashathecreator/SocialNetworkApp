@@ -6,13 +6,13 @@
 
 ## 1. Post router
 ### *Create, delete, update posts*
-### 2. User router
-*Create user, get user information by his UID*
-### 3. Authentication router
-*Login into system*
-### 4. Vote router
-*Vote system for posts*
-
+## 2. User router
+### *Create user, get user information by his UID*
+## 3. Authentication router
+### *Login into system*
+## 4. Vote router
+### *Vote system for posts*
+---
 # How to run locally
 ### Clone this repository via git clone
 
