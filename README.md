@@ -1,3 +1,4 @@
+![alt text](fastapi.png)
 # Social Network API
 ---
 ## Core stack: Python + FastAPI + PostgreSQL + Alembic + PyTest
